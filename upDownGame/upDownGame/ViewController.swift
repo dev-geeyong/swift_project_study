@@ -11,27 +11,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var inputNumber: UITextField!
     @IBOutlet var resultLabel: UILabel!
+    
     let result = Int.random(in: 0...100)
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputNumber.delegate = self
        
         print(result)
         
         
     }
-
-
-    @IBAction func myButton(_ sender: Any) {
-        var test =  Int(inputNumber.text!)
-        if result == test {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        var input = Int(inputNumber.text!)
+        if result == input {
             resultLabel.text = "Bingo!"
         }
-        else if result > test! {
+        else if result > input! {
             resultLabel.text = "up"
         }
         else{
             resultLabel.text = "down"
         }
+        
+        return true
+    }
+
+
+    @IBAction func myButton(_ sender: Any) {
+        
     }
 }
 
