@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - IBOutlet
     @IBOutlet var phoneNumber: UITextField!
@@ -57,17 +57,19 @@ class ThirdViewController: UIViewController {
         
         //전화번호 or 달력 값이없는 경우 sumitButton 비활성화
         if phoneNumber.text?.isEmpty ?? true ||
-            dateLabel.text! == "" {
+            dateLabel.text?.isEmpty ?? true {
             sumitButton.isEnabled = false
         }
         else{
             sumitButton.isEnabled = true
         }
     }
+
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         sumitButton.isEnabled = false
+        phoneNumber.delegate = self
       
         //키보드 내리기
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
