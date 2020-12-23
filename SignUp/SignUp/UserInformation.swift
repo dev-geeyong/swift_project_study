@@ -10,9 +10,9 @@ import Foundation
 class UserInformation {
     static let sharedData: UserInformation = UserInformation()
     
-    var phoneNumber: String?
-    var dateValue: String?
-    var userId: String?
+    var phoneNumber: String? //전화번호
+    var dateValue: String? //달력 값
+    var userId: String? // ID 값
     
     
 }

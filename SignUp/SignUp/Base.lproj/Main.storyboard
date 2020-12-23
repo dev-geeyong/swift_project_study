@@ -19,7 +19,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001-house" translatesAutoresizingMaskIntoConstraints="NO" id="iiL-Ko-6WU">
                                 <rect key="frame" x="16" y="60" width="382" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="uN0-Yk-0sj"/>
+                                    <constraint firstAttribute="height" constant="150" id="uN0-Yk-0sj">
+                                        <variation key="heightClass=compact" constant="50"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-4r-zuL">
@@ -121,7 +123,7 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="lvG-vG-yqR">
-                                        <variation key="heightClass=compact" constant="100"/>
+                                        <variation key="heightClass=compact" constant="60"/>
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -210,19 +212,23 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ASy-Bk-8Rq">
                                 <rect key="frame" x="0.0" y="202" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="I8W-S8-gM8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I8W-S8-gM8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="I8W-S8-gM8"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="datePickerValueChanged:" destination="w8p-h3-Lcj" eventType="valueChanged" id="Ylv-tV-yI7"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsM-dI-AxI">
-                                <rect key="frame" x="30" y="478" width="30" height="30"/>
-                                <state key="normal" title="취소">
-                                    <color key="titleColor" systemColor="systemPinkColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="n5f-Rs-nHx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tY-mV-HhX">
                                 <rect key="frame" x="192" y="478" width="30" height="30"/>
                                 <state key="normal" title="이전"/>
@@ -238,6 +244,16 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="4KO-Ea-3os"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsM-dI-AxI">
+                                <rect key="frame" x="30" y="478" width="30" height="30"/>
+                                <state key="normal" title="취소">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCancelButton:" destination="w8p-h3-Lcj" eventType="touchUpInside" id="9bC-Vt-nbV"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="n5f-Rs-nHx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WrF-14-lJb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,19 +265,18 @@
                             <constraint firstItem="WhA-PR-ad3" firstAttribute="top" secondItem="ASy-Bk-8Rq" secondAttribute="bottom" constant="60" id="8A8-JY-Nci"/>
                             <constraint firstItem="WrF-14-lJb" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="4tY-mV-HhX" secondAttribute="bottom" constant="354" id="8FK-Sp-0YF"/>
                             <constraint firstItem="NHA-14-izU" firstAttribute="leading" secondItem="WrF-14-lJb" secondAttribute="leading" constant="29" id="F6m-YD-MiS"/>
-                            <constraint firstItem="WrF-14-lJb" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="YsM-dI-AxI" secondAttribute="bottom" constant="354" id="J8c-wU-Uj9"/>
                             <constraint firstItem="WrF-14-lJb" firstAttribute="trailing" secondItem="udb-sj-KHM" secondAttribute="trailing" constant="20" id="JRR-b7-5lm"/>
                             <constraint firstItem="4tY-mV-HhX" firstAttribute="top" secondItem="ASy-Bk-8Rq" secondAttribute="bottom" constant="60" id="Jxh-ba-6lw"/>
                             <constraint firstItem="WrF-14-lJb" firstAttribute="trailing" secondItem="NHA-14-izU" secondAttribute="trailing" constant="20" id="Kuu-fN-XHi"/>
+                            <constraint firstItem="YsM-dI-AxI" firstAttribute="top" secondItem="ASy-Bk-8Rq" secondAttribute="bottom" constant="60" id="OM1-vx-J8y"/>
                             <constraint firstItem="NHA-14-izU" firstAttribute="top" secondItem="tRx-gP-C4x" secondAttribute="bottom" constant="8" symbolic="YES" id="RuG-Yh-msc"/>
                             <constraint firstItem="tRx-gP-C4x" firstAttribute="leading" secondItem="WrF-14-lJb" secondAttribute="leading" constant="29" id="RuW-AG-JaF"/>
                             <constraint firstItem="udb-sj-KHM" firstAttribute="top" secondItem="NHA-14-izU" secondAttribute="bottom" constant="16" id="YJ4-d1-YYa"/>
                             <constraint firstItem="4tY-mV-HhX" firstAttribute="centerX" secondItem="bhY-bE-IwO" secondAttribute="centerX" id="YcD-NV-7Il"/>
                             <constraint firstItem="tRx-gP-C4x" firstAttribute="top" secondItem="WrF-14-lJb" secondAttribute="top" constant="9" id="ci3-pb-TEg"/>
-                            <constraint firstItem="YsM-dI-AxI" firstAttribute="leading" secondItem="WrF-14-lJb" secondAttribute="leading" constant="30" id="f0c-mz-h0T"/>
                             <constraint firstItem="ASy-Bk-8Rq" firstAttribute="top" secondItem="Mup-DL-hkT" secondAttribute="bottom" constant="43" id="lHo-Zd-u7d"/>
                             <constraint firstItem="WrF-14-lJb" firstAttribute="trailing" secondItem="WhA-PR-ad3" secondAttribute="trailing" constant="30" id="tec-af-vPA"/>
-                            <constraint firstItem="YsM-dI-AxI" firstAttribute="top" secondItem="ASy-Bk-8Rq" secondAttribute="bottom" constant="60" id="wPo-Oo-arj"/>
+                            <constraint firstItem="YsM-dI-AxI" firstAttribute="leading" secondItem="WrF-14-lJb" secondAttribute="leading" constant="30" id="vAB-EB-Duw"/>
                             <constraint firstItem="ASy-Bk-8Rq" firstAttribute="leading" secondItem="bhY-bE-IwO" secondAttribute="leading" id="yeV-dv-Flo"/>
                         </constraints>
                     </view>
@@ -281,7 +296,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ry-mU-b6o"/>
+        <segue reference="MIu-gr-edZ"/>
+        <segue reference="1wv-FF-REh"/>
         <segue reference="cmL-zd-gJe"/>
     </inferredMetricsTieBreakers>
     <resources>

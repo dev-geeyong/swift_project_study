@@ -15,9 +15,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userIdTextField.text = UserInformation.sharedData.userId
-     
+        
+        //키보드 내리기
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
         }
+    override func viewWillAppear(_ animated: Bool) { // 취소, 가입 버튼으로 화면이 리로드될때
+        userIdTextField.text = UserInformation.sharedData.userId
+        
+        
+    }
+    @IBAction func tapView (_ sender: UITapGestureRecognizer){ //키보드 내리기
+        self.view.endEditing(true)
+    }
          
 }
 
