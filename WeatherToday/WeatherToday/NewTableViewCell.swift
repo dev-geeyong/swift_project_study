@@ -16,6 +16,9 @@ class NewTableViewCell: UITableViewCell {
     
     @IBOutlet var temperature: UILabel!
     
+    var celsius: Float!
+    var rainfallProbability: Int!
+    
     @IBOutlet var probability: UILabel!
     
     override func awakeFromNib() {

@@ -21,25 +21,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        //navigationController color 설정
+        self.navigationController?.navigationBar.barTintColor  = .systemBlue
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    //numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return country.count
     }
+    //cellForRowAt - dequeueReusableCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
         let text: String = country[indexPath.row]
         let img: String = image[indexPath.row]
         
         cell.textLabel?.text = text
         cell.imageView?.image = UIImage(named: img)
-        cell.accessoryType = .disclosureIndicator
+        
+        cell.accessoryType = .disclosureIndicator // ">"
         return cell
     }
 
+    //prepare segue.destination - sender
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextViewController: WeatherViewController = segue.destination as? WeatherViewController else {
             return
