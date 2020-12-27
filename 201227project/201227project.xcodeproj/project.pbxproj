@@ -18,6 +18,8 @@
 		4681A9CB2598644C006D2500 /* TodayWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A9CA2598644C006D2500 /* TodayWeatherViewController.swift */; };
 		4686DA12259870A800E3367C /* BoxofficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686DA11259870A800E3367C /* BoxofficeViewController.swift */; };
 		4686DA16259877B800E3367C /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 4686DA15259877B800E3367C /* JGProgressHUD */; };
+		4686DA192598860700E3367C /* MovieViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686DA182598860700E3367C /* MovieViewTableViewController.swift */; };
+		46950DD525988E6900152F55 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46950DD425988E6900152F55 /* NewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		460BC8CC2596CA0B006A3AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4681A9CA2598644C006D2500 /* TodayWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherViewController.swift; sourceTree = "<group>"; };
 		4686DA11259870A800E3367C /* BoxofficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxofficeViewController.swift; sourceTree = "<group>"; };
+		4686DA182598860700E3367C /* MovieViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewTableViewController.swift; sourceTree = "<group>"; };
+		46950DD425988E6900152F55 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		460BC8BD2596CA07006A3AF6 /* 201227project */ = {
 			isa = PBXGroup;
 			children = (
+				46950DD425988E6900152F55 /* NewTableViewCell.swift */,
+				4686DA182598860700E3367C /* MovieViewTableViewController.swift */,
 				4681A9CA2598644C006D2500 /* TodayWeatherViewController.swift */,
 				460BC8BE2596CA07006A3AF6 /* AppDelegate.swift */,
 				460BC8C02596CA07006A3AF6 /* SceneDelegate.swift */,
@@ -164,6 +170,8 @@
 				4681A9CB2598644C006D2500 /* TodayWeatherViewController.swift in Sources */,
 				4686DA12259870A800E3367C /* BoxofficeViewController.swift in Sources */,
 				460BC8C12596CA07006A3AF6 /* SceneDelegate.swift in Sources */,
+				46950DD525988E6900152F55 /* NewTableViewCell.swift in Sources */,
+				4686DA192598860700E3367C /* MovieViewTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
