@@ -17,6 +17,7 @@
 		4681A9C8259863E3006D2500 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4681A9C7259863E3006D2500 /* Alamofire */; };
 		4681A9CB2598644C006D2500 /* TodayWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A9CA2598644C006D2500 /* TodayWeatherViewController.swift */; };
 		4686DA12259870A800E3367C /* BoxofficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686DA11259870A800E3367C /* BoxofficeViewController.swift */; };
+		4686DA16259877B800E3367C /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 4686DA15259877B800E3367C /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4681A9C4259863CD006D2500 /* SwiftyJSON in Frameworks */,
+				4686DA16259877B800E3367C /* JGProgressHUD in Frameworks */,
 				4681A9C8259863E3006D2500 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +98,7 @@
 			packageProductDependencies = (
 				4681A9C3259863CD006D2500 /* SwiftyJSON */,
 				4681A9C7259863E3006D2500 /* Alamofire */,
+				4686DA15259877B800E3367C /* JGProgressHUD */,
 			);
 			productName = 201227project;
 			productReference = 460BC8BB2596CA07006A3AF6 /* 201227project.app */;
@@ -127,6 +130,7 @@
 			packageReferences = (
 				4681A9C2259863CD006D2500 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				4681A9C6259863E3006D2500 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4686DA14259877B800E3367C /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 460BC8BC2596CA07006A3AF6 /* Products */;
 			projectDirPath = "";
@@ -377,6 +381,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		4686DA14259877B800E3367C /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -389,6 +401,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4681A9C6259863E3006D2500 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		4686DA15259877B800E3367C /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4686DA14259877B800E3367C /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
