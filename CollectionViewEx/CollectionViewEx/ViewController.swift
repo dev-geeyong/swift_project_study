@@ -22,29 +22,43 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell: FriendsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath) as! FriendsCollectionViewCell
         
         let friend: Friend = self.friends[indexPath.item]
-        cell.nameAgeLabel.text = friend.nameAndAge
-        cell.adressLabel.text = friend.fullAddress
+        cell.nameAgeLabel.text = friend.cityName
+        cell.adressLabel.text = friend.cityName
         
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
-        collectionView.reloadData()
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//       
+//        collectionView.reloadData()
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let flowLayout: UICollectionViewFlowLayout
+        flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets.zero
+        flowLayout.minimumInteritemSpacing = 1
+        flowLayout.minimumLineSpacing = 1
+        
+        let halfWidth: CGFloat = UIScreen.main.bounds.width / 2.0
+        flowLayout.estimatedItemSize = CGSize(width: 3, height: 3 )
+        self.collectionView.collectionViewLayout = flowLayout
+        
         // Do any additional setup after loading the view.
         let jsonDecoder: JSONDecoder = JSONDecoder()
-        guard let dataAsset: NSDataAsset = NSDataAsset(name: "friends") else {
+        guard let dataAsset: NSDataAsset = NSDataAsset(name: "kr") else {
             return
         }
         do{
             self.friends = try jsonDecoder.decode([Friend].self, from: dataAsset.data)
         }
         catch{
-            print(error.localizedDescription)
+            debugPrint(error)
         }
         self.collectionView.reloadData()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
 
