@@ -59,7 +59,7 @@
                                             <action selector="touchUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ec6-ke-sSd"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-qh-7Xg">
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-qh-7Xg">
                                         <rect key="frame" x="0.0" y="808" width="374" height="11"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,6 +86,7 @@
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="tbn-vQ-GyC" id="NPf-2T-O69"/>
+                        <outlet property="progressVar" destination="TXm-qh-7Xg" id="K4P-kZ-53K"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="X3r-Ai-wn6"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="5fC-dP-Opa"/>
                     </connections>
