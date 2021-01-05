@@ -29,24 +29,19 @@ class ViewController: UIViewController {
     }
     @IBAction func touchUpTipButton(_ sender: UIButton) {
         inputBillTextFiled.endEditing(true)
+        tipButton0.isSelected = false
+        tipButton20.isSelected = false
+        tipButton10.isSelected = false
         if sender.currentTitle! == "0%"{
-            tipButton0.isSelected = true
-            tipButton20.isSelected = false
-            tipButton10.isSelected = false
             selectTip = 0
         }
         else if sender.currentTitle! == "10%"{
-            tipButton10.isSelected = true
-            tipButton20.isSelected = false
-            tipButton0.isSelected = false
             selectTip = 0.1
         }
         else if sender.currentTitle! == "20%"{
-            tipButton20.isSelected = true
-            tipButton0.isSelected = false
-            tipButton10.isSelected = false
             selectTip = 0.2
         }
+        sender.isSelected = true
         
     }
     
@@ -67,7 +62,7 @@ class ViewController: UIViewController {
         if segue.identifier == "goToResult"{
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.resultNumber = resultToStirng
-            destinationVC.resultString = "Split between \(splitNumber), with \(selectTip)% tip."
+            destinationVC.resultString = "Split between \(splitNumber), with \(selectTip * 100)% tip."
             
             
         }
