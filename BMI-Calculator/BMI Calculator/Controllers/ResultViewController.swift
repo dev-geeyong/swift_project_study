@@ -11,11 +11,18 @@ import UIKit
 class ResultViewController: CalculatorViewController {
 
     @IBOutlet var resultLabel: UILabel!
+    @IBOutlet var backgroundColor: UIImageView!
+    @IBOutlet var adviceLabel: UILabel!
     var bmiValue: String?
+    var advice: String?
+    var color: UIColor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         resultLabel.text = bmiValue
+        adviceLabel.text = advice
+        backgroundColor.backgroundColor = color
        
 
         // Do any additional setup after loading the view.

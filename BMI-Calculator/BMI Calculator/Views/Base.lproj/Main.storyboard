@@ -209,6 +209,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adviceLabel" destination="9IV-CT-mxw" id="KLJ-BX-7tT"/>
+                        <outlet property="backgroundColor" destination="r83-N3-Ash" id="Ten-Cp-mal"/>
                         <outlet property="resultLabel" destination="VU9-2W-Sd5" id="7aw-Iv-QLI"/>
                     </connections>
                 </viewController>

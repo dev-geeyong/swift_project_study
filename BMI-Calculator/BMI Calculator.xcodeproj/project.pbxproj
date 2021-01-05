@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		464A31A225A34E80008051C2 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A31A125A34E80008051C2 /* CalculatorBrain.swift */; };
+		464A31C225A3F3B5008051C2 /* bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A31C125A3F3B5008051C2 /* bmi.swift */; };
 		46F347E625A3136000F90E19 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F347E525A3136000F90E19 /* ResultViewController.swift */; };
 		AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F79230D61800065EFD9 /* AppDelegate.swift */; };
 		AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		464A31A125A34E80008051C2 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculatorBrain.swift; path = "BMI Calculator/Controllers/CalculatorBrain.swift"; sourceTree = SOURCE_ROOT; };
+		464A31C125A3F3B5008051C2 /* bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmi.swift; sourceTree = "<group>"; };
 		46F347E525A3136000F90E19 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AD0B9F76230D61800065EFD9 /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0B9F79230D61800065EFD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				464A31A125A34E80008051C2 /* CalculatorBrain.swift */,
+				464A31C125A3F3B5008051C2 /* bmi.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				AD0B9F7E230D61800065EFD9 /* CalculatorViewController.swift in Sources */,
 				AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */,
+				464A31C225A3F3B5008051C2 /* bmi.swift in Sources */,
 				AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */,
 				464A31A225A34E80008051C2 /* CalculatorBrain.swift in Sources */,
 				46F347E625A3136000F90E19 /* ResultViewController.swift in Sources */,
