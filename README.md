@@ -1,3 +1,5 @@
+![화면 기록 2021-01-26 오후 12 06 21](https://user-images.githubusercontent.com/55137069/105801142-d58a0180-5fdb-11eb-8345-4cc01e3e5334.gif)
+![무제](https://user-images.githubusercontent.com/55137069/105801208-ff432880-5fdb-11eb-871f-80a7ead46b8b.gif)
 ![계란](https://user-images.githubusercontent.com/55137069/105797917-51804b80-5fd4-11eb-9049-d48a23fab876.gif)
 ![signup](https://user-images.githubusercontent.com/55137069/105797930-580ec300-5fd4-11eb-94d2-6c7b9fcc82b9.gif)
 ![날시네이버](https://user-images.githubusercontent.com/55137069/105797935-59d88680-5fd4-11eb-9f8c-f3a0a15937ef.gif)
